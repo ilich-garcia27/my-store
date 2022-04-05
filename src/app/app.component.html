@@ -1,11 +1,19 @@
+<h1>*NgIf</h1>
+<input type="text" required [(ngModel)]="person.name">
+<p *ngIf="person.name === 'Ilich'; else elseStatement">My content</p>
+<ng-template #elseStatement>
+  <p>Else statement</p>
+</ng-template>
+
+<hr/>
+
 <h1>NgModel</h1>
-<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"> <!-- I need "#nameInput" 'cuz 2 lines above I'm checking if that's a valid input. -->
 <p>Name: {{ person.name }}</p>
 <p>Valid: {{ nameInput.valid }}</p>
 <input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
 <p>Age: {{ person.age }}</p>
 <p>Valid: {{ ageInput.valid }}</p>
-
 
 <hr/>
 
