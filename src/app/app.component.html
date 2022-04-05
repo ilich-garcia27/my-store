@@ -1,3 +1,16 @@
+<h1>*NgFor</h1>
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addName()">Add name</button>
+<ul>
+  <li *ngIf="names.length === 0">Empty list!</li>
+  <li *ngFor="let name of names; index as i">
+    {{ i + 1 }}) Name: {{ name }}
+    <button (click)="deleteName(i)">Delete</button>
+  </li>
+</ul>
+
+<hr/>
+
 <h1>*NgIf</h1>
 <input type="text" required [(ngModel)]="person.name">
 <p *ngIf="person.name === 'Ilich'; else elseStatement">My content</p>

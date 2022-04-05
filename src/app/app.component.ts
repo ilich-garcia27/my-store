@@ -10,6 +10,8 @@ export class AppComponent {
   age = 23;
   img = 'https://source.unsplash.com/random';
   btnDisabled = true;
+  names: string[] = ['Saraí', 'Fabrizzio', 'Ilich'];
+  newName!: string;
 
   person = {
     name: 'Ilich',
@@ -33,5 +35,14 @@ export class AppComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addName() {
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number) {
+    this.names.splice(index, 1);
   }
 }
