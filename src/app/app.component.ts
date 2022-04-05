@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,39 @@ export class AppComponent {
   btnDisabled = true;
   names: string[] = ['Saraí', 'Fabrizzio', 'Ilich'];
   newName!: string;
+  products: Product[] = [
+    {
+      name: 'The best toy',
+      price: 565,
+      image: './assets/images/toy.jpg',
+      category: 'all',
+    },
+    {
+      name: 'Almost brand new bike',
+      price: 356,
+      image: './assets/images/bike.jpg'
+    },
+    {
+      name: 'Albums collection',
+      price: 34,
+      image: './assets/images/album.jpg'
+    },
+    {
+      name: 'My books',
+      price: 23,
+      image: './assets/images/books.jpg'
+    },
+    {
+      name: 'Dog\'s house',
+      price: 34,
+      image: './assets/images/house.jpg'
+    },
+    {
+      name: 'Glasses',
+      price: 3434,
+      image: './assets/images/glasses.jpg'
+    }
+  ]
 
   person = {
     name: 'Ilich',
