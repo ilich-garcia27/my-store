@@ -1,7 +1,18 @@
+<h1>NgModel</h1>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
+<p>Name: {{ person.name }}</p>
+<p>Valid: {{ nameInput.valid }}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
+<p>Age: {{ person.age }}</p>
+<p>Valid: {{ ageInput.valid }}</p>
+
+
+<hr/>
+
 <h1>Events</h1>
 <button [disabled]="btnDisabled">Send</button>
 <button (click)="toggleButton()">Toggle button</button>
-<p>Edad: {{ person.age }}</p>
+<p>Age: {{ person.age }}</p>
 <button (click)="increaseAge()">Age++</button>
 
 <div class="box" (scroll)="onScroll($event)">
@@ -9,17 +20,20 @@
 </div>
 
 <input type="text" [value]="person.name" (keyup)="changeName($event)">
-<p>Nombre: {{ person.name }}</p>
+<p>Name: {{ person.name }}</p>
+
+<hr/>
 
 <h1>Properties</h1>
 <button [disabled]="btnDisabled">Send</button>
 <input type="text" [value]="person.name">
 <progress max="100" [value]="person.age"></progress>
 <img width="100" [src]="person.avatar">
+
 <hr/>
 
-<h1>Hola mundo</h1>
-<h2> {{ 'Hola mundo'.repeat(5) }} </h2>
+<h1>Hello world</h1>
+<h2> {{ 'Hello world'.repeat(5) }} </h2>
 <p>3 + 3 = {{3 + 3}}</p>
-<h3>Hola, soy {{ name }} y tengo {{ age }} años</h3>
+<h3>Hello, I'm {{ name }} and I'm {{ age }} years old.</h3>
 <img width="100" src={{img}} alt="image">
