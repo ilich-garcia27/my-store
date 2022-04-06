@@ -13,6 +13,8 @@ export class AppComponent {
   btnDisabled = true;
   names: string[] = ['Saraí', 'Fabrizzio', 'Ilich'];
   newName!: string;
+  imgWidth = 10;
+
   products: Product[] = [
     {
       name: 'The best toy',

@@ -25,6 +25,22 @@ ul {
   }
 }
 
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0; // It won't be visible.
+  transition: all linear .5s;
+
+  &.invalid { // Adding to this invalid class...
+    opacity: 1;
+  }
+}
+
+.img-style {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media screen and (min-width: 40em) { // Tablets.
   .products-grid {
     display: grid;
