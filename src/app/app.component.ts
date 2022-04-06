@@ -14,6 +14,11 @@ export class AppComponent {
   names: string[] = ['Saraí', 'Fabrizzio', 'Ilich'];
   newName!: string;
   imgWidth = 10;
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  }
 
   products: Product[] = [
     {
